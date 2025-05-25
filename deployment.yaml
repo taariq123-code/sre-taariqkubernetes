@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: flower-app-deployment
+  name: taariq-app-deployment
 spec: # Defines the Deployment Behaviour
   replicas: 3
   selector:
