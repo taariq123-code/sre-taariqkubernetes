@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: taariq-app-deployment
+  name: taariqahmed-app-deployment
 spec: # Defines the Deployment Behaviour
   replicas: 3
   selector:
     matchLabels:
-      app: taariq
+      app: taariqahmed
   template:
     metadata:
       labels:
-        app: taariq
+        app: taariqahmed
     spec: # Define the Pod behaviour
       containers:
       - name: cart-app
@@ -27,13 +27,12 @@ spec: # Defines the Deployment Behaviour
 ---
 # Writing Service .yml to expose the application 
 apiVersion: v1
-kind : apiVersion: v1
 kind: Service
 metadata:
-  name: myapp
+  name: taariqahmed-app-svc
 spec:
   selector:
-    app: myapp
+    app: taariqahmed
   ports:
   - port: 3016
     targetPort: 3015
