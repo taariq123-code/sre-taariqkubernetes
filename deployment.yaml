@@ -6,11 +6,11 @@ spec: # Defines the Deployment Behaviour
   replicas: 3
   selector:
     matchLabels:
-      app: web
+      app: taariq
   template:
     metadata:
       labels:
-        app: web
+        app: taariq
     spec: # Define the Pod behaviour
       containers:
       - name: cart-app
@@ -24,5 +24,19 @@ spec: # Defines the Deployment Behaviour
             cpu: "50m"  
         ports:
         - containerPort: 3015
+---
+# Writing Service .yml to expose the application 
+apiVersion: v1
+kind : apiVersion: v1
+kind: Service
+metadata:
+  name: myapp
+spec:
+  selector:
+    app: myapp
+  ports:
+  - port: 3016
+    targetPort: 3015
+
  
  
