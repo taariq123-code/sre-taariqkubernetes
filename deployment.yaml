@@ -1,5 +1,4 @@
 apiVersion: apps/v1
-kind: apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flower-app-deployment
@@ -12,16 +11,18 @@ spec: # Defines the Deployment Behaviour
     metadata:
       labels:
         app: web
-    spec: # define pod behaviour 
+    spec: # Define the Pod behaviour
       containers:
       - name: cart-app
         image: muralisocial123/flower-app:1.0
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "250Mi"
+            cpu: "100m"
           requests:
             memory: "128Mi"
-            cpu: "50m"
+            cpu: "50m"  
         ports:
         - containerPort: 3015
+ 
+ 
