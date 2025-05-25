@@ -24,4 +24,4 @@ spec: # Defines the Deployment Behaviour
             memory: "128Mi"
             cpu: "50m"
         ports:
-        - containerPort: <Port>
+        - containerPort: 3015
